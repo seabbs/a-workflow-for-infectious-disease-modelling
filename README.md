@@ -6,7 +6,7 @@
 
 **[Read the paper](https://seabbs.github.io/infectious-disease-modelling-with-multiple-datasources/paper.pdf)** (PDF) | **[Supplementary information](https://seabbs.github.io/infectious-disease-modelling-with-multiple-datasources/supplementary.pdf)** (PDF)
 
-## Overview
+## Abstract
 
 Infectious disease models can be used to inform critical public health decisions, yet often lack systematic development and validation practices.
 The infectious disease modelling community has been slow to adopt rigorous model development and criticism cycles such as the Bayesian workflow, even as these methods become increasingly formalised and widely used in other domains. Recent outbreaks have demonstrated some domain-specific challenges that infectious disease modelling faces, including evolving research questions, emerging data sources, and adapting surveillance systems.
