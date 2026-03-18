@@ -20,32 +20,6 @@ Our suggested framework emphasises parsimony, modularity, interpretability, and 
 
 ![Team Photo](figures/team-photo.jpg)
 
-- Sam Abbott (London School of Hygiene & Tropical Medicine)
-- Xiahui Li† (School of Mathematics and Statistics, University of St Andrews)
-- Punya Alahakoon† (University of Oxford)
-- Dhorasso Temfack† (School of Computer Science and Statistics, Trinity College Dublin)
-- Johannes Bracher (Karlsruhe Institute of Technology)
-- Felix Günther (Robert Koch Institute)
-- Sabine Van Elsland (MRC Centre for Global Infectious Disease Analysis, Imperial College London)
-- Adrian Lison (Computational Evolution, ETH Zurich)
-- James Hay (Nuffield Department of Medicine, University of Oxford)
-- Oliver Eales (School of Mathematics and Statistics, University of Melbourne)
-- Eben Kenah (College of Public Health, Ohio State University)
-- James McCaw (School of Mathematics and Statistics, University of Melbourne)
-- Freya Shearer (School of Population and Global Health, University of Melbourne)
-- Sebastian Funk (London School of Hygiene & Tropical Medicine)
-- Mircea T. Sofonea (University of Montpellier)
-- Pierre Nouvellet (MRC Centre for Global Infectious Disease Analysis, Imperial College London & School of Life Sciences, University of Sussex)
-- Daniela De Angelis (MRC Biostatistics Unit, University of Cambridge)
-- Michael J. Plank* (School of Mathematics and Statistics, University of Canterbury)
-- Anne Cori* (MRC Centre for Global Infectious Disease Analysis, Imperial College London)
-- Anne Presanis* (MRC Biostatistics Unit, University of Cambridge)
-
-† Equal contribution
-* Joint last authors
-
-**Note:** Author order is provisional and subject to change.
-
 ## Repository Structure
 
 ```
