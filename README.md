@@ -1,11 +1,11 @@
 # A Workflow for Infectious Disease Modelling
 
-[![Build and Deploy Paper](https://github.com/seabbs/infectious-disease-modelling-with-multiple-datasources/actions/workflows/build-paper.yml/badge.svg?branch=main)](https://github.com/seabbs/infectious-disease-modelling-with-multiple-datasources/actions/workflows/build-paper.yml)
+[![Build and Deploy Paper](https://github.com/seabbs/a-workflow-for-infectious-disease-modelling/actions/workflows/build-paper.yml/badge.svg?branch=main)](https://github.com/seabbs/a-workflow-for-infectious-disease-modelling/actions/workflows/build-paper.yml)
 [![DOI](https://zenodo.org/badge/991854282.svg)](https://doi.org/10.5281/zenodo.19097427)
 
 > **Note**: This repository is synchronised with Overleaf. The main branch reflects the current state of the manuscript.
 
-**[Read the paper](https://seabbs.github.io/infectious-disease-modelling-with-multiple-datasources/paper.pdf)** (PDF) | **[Supplementary information](https://seabbs.github.io/infectious-disease-modelling-with-multiple-datasources/supplementary.pdf)** (PDF)
+**[Read the paper](https://samabbott.co.uk/a-workflow-for-infectious-disease-modelling/paper.pdf)** (PDF) | **[Supplementary information](https://samabbott.co.uk/a-workflow-for-infectious-disease-modelling/supplementary.pdf)** (PDF)
 
 ## Abstract
 
@@ -48,7 +48,7 @@ Our suggested framework emphasises parsimony, modularity, interpretability, and 
             Presanis, Anne},
   year = {2026},
   doi = {10.5281/zenodo.19097427},
-  url = {https://seabbs.github.io/infectious-disease-modelling-with-multiple-datasources/paper.pdf}
+  url = {https://samabbott.co.uk/a-workflow-for-infectious-disease-modelling/paper.pdf}
 }
 ```
 
