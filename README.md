@@ -34,7 +34,7 @@ Our suggested framework emphasises parsimony, modularity, interpretability, and 
 ## Citation
 
 ```bibtex
-@misc{abbott2025workflow,
+@misc{abbott2026workflow,
   title = {A Workflow for Infectious Disease Modelling},
   author = {Abbott, Sam and Li, Xiahui and Alahakoon, Punya and
             Temfack, Dhorasso and Bracher, Johannes and
@@ -45,7 +45,7 @@ Our suggested framework emphasises parsimony, modularity, interpretability, and 
             Nouvellet, Pierre and De Angelis, Daniela and
             Plank, Michael J. and Cori, Anne and
             Presanis, Anne},
-  year = {2025},
+  year = {2026},
   doi = {@placeholder},
   url = {https://seabbs.github.io/infectious-disease-modelling-with-multiple-datasources/paper.pdf}
 }
