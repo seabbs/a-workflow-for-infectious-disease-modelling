@@ -1,0 +1,89 @@
+name: Build and Deploy Paper
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile main paper
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          args: >-
+            -pdf
+            -interaction=nonstopmode
+            -file-line-error
+
+      - name: Compile supplementary
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: supplementary.tex
+          args: >-
+            -pdf
+            -interaction=nonstopmode
+            -file-line-error
+
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-pdfs-${{ github.sha }}
+          path: |
+            main.pdf
+            supplementary.pdf
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Render README as landing page
+        if: github.ref == 'refs/heads/main'
+        run: |
+          apt-get update && apt-get install -y pandoc
+          pandoc README.md \
+            --standalone \
+            --metadata title="" \
+            -o README.html
+        # Title is already in the README as an H1
+
+      - name: Prepare site directory
+        if: github.ref == 'refs/heads/main'
+        run: |
+          mkdir -p _site
+          cp main.pdf _site/paper.pdf
+          cp supplementary.pdf _site/supplementary.pdf
+          cp README.html _site/index.html
+          cp -r figures _site/figures
+
+      - name: Upload pages artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

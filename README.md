@@ -1,6 +1,10 @@
 # A Workflow for Infectious Disease Modelling
 
+[![Build and Deploy Paper](https://github.com/seabbs/infectious-disease-modelling-with-multiple-datasources/actions/workflows/build-paper.yml/badge.svg?branch=main)](https://github.com/seabbs/infectious-disease-modelling-with-multiple-datasources/actions/workflows/build-paper.yml)
+
 > **Note**: This repository is synchronised with Overleaf. The main branch reflects the current state of the manuscript.
+
+**[Read the paper](https://seabbs.github.io/infectious-disease-modelling-with-multiple-datasources/paper.pdf)** (PDF) | **[Supplementary information](https://seabbs.github.io/infectious-disease-modelling-with-multiple-datasources/supplementary.pdf)** (PDF)
 
 ## Overview
 

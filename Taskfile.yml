@@ -1,0 +1,60 @@
+version: '3'
+
+vars:
+  MAIN: main
+  SUPP: supplementary
+
+tasks:
+  default:
+    desc: Build both PDFs
+    deps: [build-main, build-supp]
+
+  build:
+    desc: Build both PDFs
+    deps: [build-main, build-supp]
+
+  build-main:
+    desc: Compile main manuscript
+    cmds:
+      - latexmk -pdf {{.MAIN}}.tex
+    sources:
+      - "{{.MAIN}}.tex"
+      - references.bib
+      - zotero-references.bib
+      - "figures/**/*"
+    generates:
+      - "{{.MAIN}}.pdf"
+
+  build-supp:
+    desc: Compile supplementary materials
+    cmds:
+      - latexmk -pdf {{.SUPP}}.tex
+    sources:
+      - "{{.SUPP}}.tex"
+      - references.bib
+      - zotero-references.bib
+      - "supplement_figures/**/*"
+    generates:
+      - "{{.SUPP}}.pdf"
+
+  clean:
+    desc: Remove LaTeX auxiliary files
+    cmds:
+      - latexmk -c {{.MAIN}}.tex
+      - latexmk -c {{.SUPP}}.tex
+
+  clean-all:
+    desc: Remove all generated files including PDFs
+    cmds:
+      - latexmk -C {{.MAIN}}.tex
+      - latexmk -C {{.SUPP}}.tex
+
+  watch:
+    desc: Watch and recompile main manuscript on changes
+    cmds:
+      - latexmk -pdf -pvc {{.MAIN}}.tex
+
+  wordcount:
+    desc: Approximate word count of manuscript body
+    cmds:
+      - texcount -inc -total {{.MAIN}}.tex
