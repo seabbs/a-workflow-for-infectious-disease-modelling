@@ -1,3 +1,15 @@
 resources/
 CLAUDE.md
 .DS_Store
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.pdf
