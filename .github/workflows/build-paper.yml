@@ -54,7 +54,7 @@ jobs:
       - name: Render README as landing page
         if: github.ref == 'refs/heads/main'
         run: |
-          apt-get update && apt-get install -y pandoc
+          sudo apt-get update && sudo apt-get install -y pandoc
           pandoc README.md \
             --standalone \
             --metadata title="" \
